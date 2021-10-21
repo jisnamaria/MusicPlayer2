@@ -8,8 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -55,8 +53,8 @@ public class AlbumServiceImp implements AlbumService {
     }
 
     @Override
-    public Collection<Album> getAlbum() {
-        return albumRepo.findAll();
+    public Album getAlbum() {
+        return (Album) albumRepo.findAll();
     }
 
     @Override

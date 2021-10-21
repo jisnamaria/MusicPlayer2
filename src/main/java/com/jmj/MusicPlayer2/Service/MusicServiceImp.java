@@ -5,7 +5,6 @@ import com.jmj.MusicPlayer2.Repo.MusicRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
 import java.util.Optional;
 
 @Service
@@ -35,8 +34,8 @@ public class MusicServiceImp implements MusicService{
     }
 
     @Override
-    public Collection<Music> getMusic() {
-        return musicRepo.findAll();
+    public Music getMusic() {
+        return (Music) musicRepo.findAll();
     }
 
     @Override

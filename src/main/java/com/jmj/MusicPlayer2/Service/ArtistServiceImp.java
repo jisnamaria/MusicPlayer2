@@ -55,8 +55,8 @@ public class ArtistServiceImp implements  ArtistService{
     }
 
     @Override
-    public Collection<Artist> getArtist() {
-        return artistRepo.findAll();
+    public Artist getArtist() {
+        return (Artist) artistRepo.findAll();
     }
 
     @Override
